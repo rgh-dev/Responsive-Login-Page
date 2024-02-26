@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --black: #262626;
+    --white: white;
+    --accent: rgb(106, 199, 134);
+    --accent-hover: rgb(41, 224, 96);
+    --font: 'Raleway', serif;
+    --f1-size: clamp(2rem, 4vw + 1rem, 3rem);
+    --f2-size: clamp(1rem, 4vw + 1rem, 2rem);
+    --grad1: linear-gradient(180deg, rgb(230, 230, 230), rgb(196, 196, 196));
+    --grad2: linear-gradient(180deg, rgb(26, 26, 26), rgb(51, 51, 51));
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#rgh {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#rgh img {
+    width: 80px;
+    height: 80px;
+}
+
+.container {
+    height: 100vh;
+    background: var(--grad1);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapper {
+    background-color: var(--black);
+    width: clamp(350px, 50vw, 500px);
+    padding: 2rem;
+    border-radius: 6px;
+    color: var(--white);
+    box-shadow: 1px 1px 20px var(--black);
+    letter-spacing: 1px;
+    animation: toRight 0.4s ease;
+}
+label, input {
+    width: 100%;
+}
+label {
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+.login-wrapper .required {
+    color: red;
+    font-size: 1.3rem;
+}
+.login-wrapper h1 {
+    margin: 0.6rem 0;
+    text-align: right;
+}
+.login-wrapper p {
+    margin: 0.6rem 0 1rem 0;
+    text-align: right;
+}
+input {
+    padding: 0.6rem;
+    margin: 0.6rem 0;
+    border: none;
+    outline: none;
+}
+input:focus {
+    background-color: rgb(231, 231, 231);
+}
+.login-wrapper .lgn-btn, .forgot-password-modal-content button {
+    margin: 1rem 0;
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--accent);
+    color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+.login-wrapper .lgn-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.signup-container {
+    display: flex;
+    justify-content: space-between;
+}
+.signup-container button { 
+    border: none;
+    background-color: transparent;
+    color: var(--accent);
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.signup-container button:hover {
+    cursor: pointer;
+    color: var(--white);
+}
+
+/* Forgot Password */
+#forgot-password-modal, #signup-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #262626ee;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.forgot-password-modal-content, .signup-modal-content {
+    margin: 15% auto;
+    width: clamp(350px, 50vw, 500px);
+    padding: 2rem;
+    border-radius: 6px;
+    background: var(--grad2);
+    color: var(--white);
+    letter-spacing: 1px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+    animation: toRight 0.4s ease;
+
+}
+.forgot-password-modal-content .required, .signup-modal-content .required {
+    color: red;
+    font-size: 1.3rem;
+}
+.forgot-password-modal-content button, .signup-modal-content button  {
+    margin: 1rem 0;
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--accent);
+    color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+.forgot-password-modal-content button:hover, .signup-modal-content button:hover {
+    background-color: var(--accent-hover);
+}
+.forgot-password-modal-content p, .signup-modal-content p {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.close {
+    color: #aaa;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+.close h4:hover,
+.close h4:focus {
+    color: var(--accent-hover);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+@keyframes toRight {
+    0%{
+        opacity: 0;
+        transform: scale(0.4, 1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    
+}

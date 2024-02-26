@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    <script type="text/javascript" src="index.js" sync></script>
+</head>
+<body>
+    <div id="rgh">
+        <img src="images/rgh.png" alt="logo">
+    </div>
+    <section class="container">
+        <div class="login-wrapper">
+            <form action="/action_page.php" method="post" class="main-form">
+                <h1>Hello there :)</h1>
+                <p>Nice to have you again!</p>
+    
+                <label for="login-username">Username<span class="required">*</span></label>
+                <input type="text" placeholder="Enter Username" id="login-username" autocomplete="on" required>
+                
+                <label for="login-password">Password<span class="required">*</span></label>
+                <input type="password" placeholder="Enter Password" id="login-password" autocomplete="on" required>
+    
+                <button type="submit" class="lgn-btn">Log in</button>
+            </form>
+            <div class="signup-container">
+                <!-- modal buttons-->
+                <button id="forgot-password">Forgot password?</button>
+                <button id="signup">Sign-up</button>
+            </div>
+        </div>
+          
+        <!-- forgot password modal -->
+        <div id="forgot-password-modal">
+            <div class="forgot-password-modal-content">
+                <span class="close"><h4>X</h4></span>
+                <form action="/action_page.php" method="post">
+                    <label for="forgot-password-email">Email<span class="required">*</span></label>
+                    <input type="text" placeholder="Enter Email" id="forgot-password-email" autocomplete="on" required>
+            
+                    <button type="submit">Reset Password</button>
+                    <p>Note: For security, we will send an email to your email address to reset your password.</p>
+                </form>
+            </div>
+        </div>
+
+        <!-- signup modal-->
+        <div id="signup-modal">
+            <div class="signup-modal-content">
+                <span class="close"><h4>X</h4></span>
+                <form action="/action_page.php" method="post">
+                    <label for="signup-username">Username<span class="required">*</span></label>
+                    <input type="text" placeholder="Enter your username" id="signup-username" required>
+
+                    <label for="signup-password">Password<span class="required">*</span></label>
+                    <input type="text" placeholder="Enter your password" id="signup-password" required>
+
+                    <label for="signup-email">Email<span class="required">*</span></label>
+                    <input type="text" placeholder="Enter your Email" id="signup-email" required>
+                    
+                    <button type="submit">Register</button>
+                    <p>Note: Please verify your account upon registration. An email will be sent to the email you provided.</p>
+                </form>
+            </div>
+    </section>
+
+
+    
+</body>
+</html>
